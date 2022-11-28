@@ -7,6 +7,8 @@ import java.util.Scanner;
 import support.cse131.NotYetImplementedException;
 
 public class NameToHeight {
+
+	
 	/**
 	 * Construct and fill a map with your studio group members' names, each
 	 * associated with his or her height.
@@ -19,9 +21,24 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
-		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Integer> person = new HashMap<>();
+		person.put("Kaitlyn",67);
+		System.out.println("Enter name: ");
+		String name = in.next();
+		while (!name.equals("quit")) {
+			if (person.get(name)!= null) {
+				int height = person.get(name);
+				System.out.println(name + " is " + height + " inches tall");
+				
+			}
+			else {
+				System.out.println("Name DNE");
+			}
+			
+			System.out.println("Enter name: ");
+			name = in.next();
+		}
+		
 
 	}
 }
